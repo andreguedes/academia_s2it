@@ -20,6 +20,10 @@ class HomeSKYViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        MovieAPIStore().getAllMovies {
+            (movies, error) in print(movies?.toJSON())
+        }
     }
 
     override func didReceiveMemoryWarning() {

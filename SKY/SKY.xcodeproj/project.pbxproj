@@ -20,6 +20,8 @@
 		877893E91EFEEB0A0045124F /* GenericAPIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877893E81EFEEB0A0045124F /* GenericAPIStore.swift */; };
 		877893EB1EFEED110045124F /* MovieStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877893EA1EFEED110045124F /* MovieStore.swift */; };
 		877893ED1EFEEDB60045124F /* MovieRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877893EC1EFEEDB60045124F /* MovieRoute.swift */; };
+		877893EF1EFEF28D0045124F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877893EE1EFEF28D0045124F /* API.swift */; };
+		877893F11EFEF43E0045124F /* MovieAPIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877893F01EFEF43E0045124F /* MovieAPIStore.swift */; };
 		D9D78CB4DD495C8F7BF31C13 /* Pods_SKYTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 122692547D1221F57DF2F2A9 /* Pods_SKYTests.framework */; };
 		D9DCD0F1E3EA16D46E6CB505 /* Pods_SKY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497FA149AF61C4385C77B8EC /* Pods_SKY.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +68,8 @@
 		877893E81EFEEB0A0045124F /* GenericAPIStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenericAPIStore.swift; path = Network/Store/GenericAPIStore.swift; sourceTree = "<group>"; };
 		877893EA1EFEED110045124F /* MovieStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieStore.swift; path = Network/Store/MovieStore.swift; sourceTree = "<group>"; };
 		877893EC1EFEEDB60045124F /* MovieRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieRoute.swift; path = Network/Router/MovieRoute.swift; sourceTree = "<group>"; };
+		877893EE1EFEF28D0045124F /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = Network/API/API.swift; sourceTree = "<group>"; };
+		877893F01EFEF43E0045124F /* MovieAPIStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieAPIStore.swift; path = Network/Store/MovieAPIStore.swift; sourceTree = "<group>"; };
 		9684733DCE4123F4DBE2E85D /* Pods-SKYUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKYUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKYUITests/Pods-SKYUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF799882ECDA1884EFFF2A37 /* Pods-SKY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKY.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKY/Pods-SKY.release.xcconfig"; sourceTree = "<group>"; };
 		E104BE8DC26DF177184C5DAB /* Pods-SKY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKY/Pods-SKY.debug.xcconfig"; sourceTree = "<group>"; };
@@ -223,6 +227,7 @@
 		877893E51EFEE8EE0045124F /* API */ = {
 			isa = PBXGroup;
 			children = (
+				877893EE1EFEF28D0045124F /* API.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -240,6 +245,7 @@
 			children = (
 				877893E81EFEEB0A0045124F /* GenericAPIStore.swift */,
 				877893EA1EFEED110045124F /* MovieStore.swift */,
+				877893F01EFEF43E0045124F /* MovieAPIStore.swift */,
 			);
 			name = Store;
 			sourceTree = "<group>";
@@ -532,8 +538,10 @@
 				876C5D711EFE9F1400B0210E /* AppDelegate.swift in Sources */,
 				877893E31EFEE3B40045124F /* CineViewModel.swift in Sources */,
 				877893ED1EFEEDB60045124F /* MovieRoute.swift in Sources */,
+				877893F11EFEF43E0045124F /* MovieAPIStore.swift in Sources */,
 				876C5DA11EFEA51E00B0210E /* HomeSKYViewController.swift in Sources */,
 				877893E91EFEEB0A0045124F /* GenericAPIStore.swift in Sources */,
+				877893EF1EFEF28D0045124F /* API.swift in Sources */,
 				876C5DA61EFED69A00B0210E /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

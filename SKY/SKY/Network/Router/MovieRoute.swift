@@ -15,12 +15,12 @@ enum MovieRouter {
     var path: String {
         switch self {
         case .allMovies():
-            return ""
+            return API.movies
         }
     }
     
     func asURLRequest() throws -> URL? {
-        guard let url = URL(string: "API.baseURL") else {
+        guard let url = URL(string: API.baseURL) else {
             return nil
         }
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
