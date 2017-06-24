@@ -19,4 +19,16 @@ enum MovieRouter {
         }
     }
     
+    func asURLRequest() throws -> URL? {
+        guard let url = URL(string: "API.baseURL") else {
+            return nil
+        }
+        var urlRequest = URLRequest(url: url.appendingPathComponent(path))
+        
+        switch self {
+        case .allMovies():
+            return urlRequest.url
+        }
+    }
+    
 }
