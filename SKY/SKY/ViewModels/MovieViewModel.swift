@@ -1,5 +1,5 @@
 //
-//  CineViewModel.swift
+//  MovieViewModel.swift
 //  SKY
 //
 //  Created by Andre Guedes on 24/06/17.
@@ -11,8 +11,9 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
-class CineViewModel {
+class MovieViewModel {
     
+    typealias completion <T> = (_ result: T, _ failure: NSError?) -> Void
     private var movieList: [Movie]?
     private var currentMovie: Movie?
     private var _coverImage: UIImage?
@@ -21,6 +22,35 @@ class CineViewModel {
     init(movies: [Movie]) {
         self.movieList = movies
         self._arrayCacheImage = []
+    }
+    
+    func downloadImage(completion: @escaping completion<UIImage>) {
+        guard let _id = self.id else {
+            return
+        }
+        let _url = URL(string: self.currentMovie?.coverUrl ?? "")
+        
+        for cacheImageLoad in self._arrayCacheImage! {
+            if let _cacheImageLoad = cacheImageLoad?.image(withIdentifier: _id) {
+                print("=========CACHE")
+                
+                completion(_cacheImageLoad, nil)
+                return
+            }
+        }
+        
+        Alamofire.request(_url!).responseImage {
+            (response) in
+            if let image = response.result.value {
+                let cacheImage = AutoPurgingImageCache()
+                cacheImage.add(image, withIdentifier: _id)
+                
+                self._arrayCacheImage?.append(cacheImage)
+                print("=========BAIXOU")
+                
+                completion(image, nil)
+            }
+        }
     }
     
     var countOfMovies: Int? {

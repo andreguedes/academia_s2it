@@ -1,5 +1,5 @@
 //
-//  MovieRoute.swift
+//  MovieRouter.swift
 //  SKY
 //
 //  Created by Andre Guedes on 24/06/17.

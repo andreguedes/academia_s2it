@@ -8,7 +8,10 @@
 
 import UIKit
 
-class HomeSKYViewController: UIViewController {
+class HomeSKYViewController: BaseViewController {
+    
+    var dataProvider: MovieDataProvider?
+    var viewModel: MovieViewModel?
 
     @IBOutlet weak var moviesCollection: UICollectionView!
     
@@ -21,16 +24,18 @@ class HomeSKYViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        MovieAPIStore().getAllMovies {
-            (movies, error) in print(movies?.toJSON())
-        }
+        self.moviesCollection.register(UINib(nibName: "MovieCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MovieCollectionViewCell")
+        
+        self.dataProvider = MovieDataProvider()
+        self.dataProvider?.delegate = self
+        self.moviesCollection.dataSource = self
+        self.dataProvider?.getAllMovies()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
