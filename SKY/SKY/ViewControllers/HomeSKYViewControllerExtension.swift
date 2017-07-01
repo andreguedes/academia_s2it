@@ -15,6 +15,8 @@ extension HomeSKYViewController: MovieDataProviderProtocol {
         print("======CARREGOU O VM")
         print(viewModel)
         
+        self.loadingView.hideLoading()
+        
         self.viewModel = viewModel as? MovieViewModel
         self.moviesCollection.reloadData()
     }
@@ -22,6 +24,8 @@ extension HomeSKYViewController: MovieDataProviderProtocol {
     func failed(_ provider: GenericDataProvider?, error: NSError) {
         print("======ERROR")
         print(error)
+        
+        self.showError(title: "Alerta", message: "Deu ruim na API", description: "", error: error)
     }
     
 }

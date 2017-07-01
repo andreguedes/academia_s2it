@@ -12,7 +12,8 @@ class HomeSKYViewController: BaseViewController {
     
     var dataProvider: MovieDataProvider?
     var viewModel: MovieViewModel?
-
+    
+    @IBOutlet weak var loadingView: LoadingView!
     @IBOutlet weak var moviesCollection: UICollectionView!
     
     @IBAction func tappedRefresh(_ sender: UIBarButtonItem) {
@@ -29,6 +30,7 @@ class HomeSKYViewController: BaseViewController {
         self.dataProvider = MovieDataProvider()
         self.dataProvider?.delegate = self
         self.moviesCollection.dataSource = self
+        self.loadingView.showLoading()
         self.dataProvider?.getAllMovies()
     }
 

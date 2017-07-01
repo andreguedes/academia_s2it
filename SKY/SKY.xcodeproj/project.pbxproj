@@ -30,6 +30,8 @@
 		877EF94B1F0025880049F0EF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877EF94A1F0025880049F0EF /* BaseViewController.swift */; };
 		877EF94F1F002A9C0049F0EF /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877EF94D1F002A9C0049F0EF /* MovieCollectionViewCell.swift */; };
 		877EF9501F002A9C0049F0EF /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 877EF94E1F002A9C0049F0EF /* MovieCollectionViewCell.xib */; };
+		87B85DBC1F07D1FB00E12337 /* KDLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B85DBB1F07D1FB00E12337 /* KDLoadingView.swift */; };
+		87B85DBE1F07D26500E12337 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B85DBD1F07D26500E12337 /* LoadingView.swift */; };
 		D9D78CB4DD495C8F7BF31C13 /* Pods_SKYTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 122692547D1221F57DF2F2A9 /* Pods_SKYTests.framework */; };
 		D9DCD0F1E3EA16D46E6CB505 /* Pods_SKY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497FA149AF61C4385C77B8EC /* Pods_SKY.framework */; };
 /* End PBXBuildFile section */
@@ -86,6 +88,9 @@
 		877EF94A1F0025880049F0EF /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = ViewControllers/BaseViewController.swift; sourceTree = "<group>"; };
 		877EF94D1F002A9C0049F0EF /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieCollectionViewCell.swift; path = Views/MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		877EF94E1F002A9C0049F0EF /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MovieCollectionViewCell.xib; path = Views/MovieCollectionViewCell.xib; sourceTree = "<group>"; };
+		87B85DBA1F07D1FB00E12337 /* KDLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDLoadingView.h; sourceTree = "<group>"; };
+		87B85DBB1F07D1FB00E12337 /* KDLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDLoadingView.swift; sourceTree = "<group>"; };
+		87B85DBD1F07D26500E12337 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingView.swift; path = Helpers/Extensions/Loading/LoadingView.swift; sourceTree = "<group>"; };
 		9684733DCE4123F4DBE2E85D /* Pods-SKYUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKYUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKYUITests/Pods-SKYUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF799882ECDA1884EFFF2A37 /* Pods-SKY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKY.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKY/Pods-SKY.release.xcconfig"; sourceTree = "<group>"; };
 		E104BE8DC26DF177184C5DAB /* Pods-SKY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKY/Pods-SKY.debug.xcconfig"; sourceTree = "<group>"; };
@@ -275,6 +280,7 @@
 		877EF9441F0003880049F0EF /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				87B85DB91F07D0C900E12337 /* Loading */,
 				877EF9451F0003920049F0EF /* Extensions */,
 				877EF9481F0008550049F0EF /* ErrorAlert.swift */,
 			);
@@ -296,6 +302,16 @@
 				877EF94E1F002A9C0049F0EF /* MovieCollectionViewCell.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		87B85DB91F07D0C900E12337 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				87B85DBA1F07D1FB00E12337 /* KDLoadingView.h */,
+				87B85DBB1F07D1FB00E12337 /* KDLoadingView.swift */,
+				87B85DBD1F07D26500E12337 /* LoadingView.swift */,
+			);
+			name = Loading;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -583,6 +599,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87B85DBC1F07D1FB00E12337 /* KDLoadingView.swift in Sources */,
 				877EF9411EFFF14C0049F0EF /* MovieDataProvider.swift in Sources */,
 				877893EB1EFEED110045124F /* MovieStore.swift in Sources */,
 				876C5D711EFE9F1400B0210E /* AppDelegate.swift in Sources */,
@@ -599,6 +616,7 @@
 				876C5DA61EFED69A00B0210E /* Movie.swift in Sources */,
 				877EF9491F0008550049F0EF /* ErrorAlert.swift in Sources */,
 				877EF94F1F002A9C0049F0EF /* MovieCollectionViewCell.swift in Sources */,
+				87B85DBE1F07D26500E12337 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

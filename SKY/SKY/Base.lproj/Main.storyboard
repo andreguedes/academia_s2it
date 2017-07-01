@@ -12,6 +12,7 @@
         <!--SKY-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="HomeSKYViewController" customModule="SKY" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -31,12 +32,34 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gaJ-Mq-E3r" customClass="LoadingView" customModule="SKY" customModuleProvider="target">
+                                <rect key="frame" x="130" y="254" width="60" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="bay-UU-4Bs"/>
+                                    <constraint firstAttribute="width" constant="60" id="ll1-vc-q1K"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="thirdColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesWhenStopped" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xTq-rd-KQe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="93a-MU-kUm"/>
+                            <constraint firstItem="gaJ-Mq-E3r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9fe-F6-laK"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xTq-rd-KQe" secondAttribute="bottom" id="LXc-JW-RPM"/>
                             <constraint firstItem="xTq-rd-KQe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Xq1-dd-i2d"/>
+                            <constraint firstItem="gaJ-Mq-E3r" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bPy-Kj-Hee"/>
                             <constraint firstAttribute="trailing" secondItem="xTq-rd-KQe" secondAttribute="trailing" id="mHs-2h-Bn1"/>
                         </constraints>
                     </view>
@@ -49,10 +72,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="loadingView" destination="gaJ-Mq-E3r" id="thH-w9-IS0"/>
                         <outlet property="moviesCollection" destination="xTq-rd-KQe" id="j4v-3I-qjf"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="725.625" y="-544.0140845070423"/>
         </scene>
