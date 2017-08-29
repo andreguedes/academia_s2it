@@ -10,7 +10,15 @@ PODS:
   - EFInternetIndicator/Network (0.2.0):
     - ReachabilitySwift
   - ObjectMapper (2.2.7)
+  - ObjectMapper+Realm (0.3):
+    - ObjectMapper
+    - RealmSwift
   - ReachabilitySwift (3)
+  - Realm (2.8.3):
+    - Realm/Headers (= 2.8.3)
+  - Realm/Headers (2.8.3)
+  - RealmSwift (2.8.3):
+    - Realm (= 2.8.3)
   - SwiftMessages (3.3.4)
   - SwiftyJSON (3.1.4)
 
@@ -19,6 +27,8 @@ DEPENDENCIES:
   - AlamofireImage (~> 3.1)
   - EFInternetIndicator
   - ObjectMapper
+  - ObjectMapper+Realm
+  - RealmSwift
   - SwiftyJSON (~> 3.1)
 
 SPEC CHECKSUMS:
@@ -26,10 +36,13 @@ SPEC CHECKSUMS:
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   EFInternetIndicator: 76219397add7b5f2388869fa4d9305d0c6af51e1
   ObjectMapper: 65abcfd9a61cf7396cbd14a4fb22fddfcc46577e
+  ObjectMapper+Realm: 98992926f775a4fdf1c025541b97c78119f15b8a
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  Realm: 3601ef091c8c499a31101d8563b991e75546cdce
+  RealmSwift: 8183818515471b01a99abdd2970f8e4fd52b6f4a
   SwiftMessages: 1172842c4d4af818704f90c50ec8dc597e55c9af
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: ab1dadba68ed949ca751e245f7ea203b4a49fe5c
+PODFILE CHECKSUM: c20449a8c1222425af4a5036d790aedc9c208a7c
 
 COCOAPODS: 1.2.1

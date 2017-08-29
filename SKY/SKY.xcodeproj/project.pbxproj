@@ -32,6 +32,7 @@
 		877EF9501F002A9C0049F0EF /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 877EF94E1F002A9C0049F0EF /* MovieCollectionViewCell.xib */; };
 		87B85DBC1F07D1FB00E12337 /* KDLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B85DBB1F07D1FB00E12337 /* KDLoadingView.swift */; };
 		87B85DBE1F07D26500E12337 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B85DBD1F07D26500E12337 /* LoadingView.swift */; };
+		87E2C1CB1F081A4A005F7BE0 /* TestVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E2C1CA1F081A4A005F7BE0 /* TestVM.swift */; };
 		D9D78CB4DD495C8F7BF31C13 /* Pods_SKYTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 122692547D1221F57DF2F2A9 /* Pods_SKYTests.framework */; };
 		D9DCD0F1E3EA16D46E6CB505 /* Pods_SKY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497FA149AF61C4385C77B8EC /* Pods_SKY.framework */; };
 /* End PBXBuildFile section */
@@ -91,6 +92,7 @@
 		87B85DBA1F07D1FB00E12337 /* KDLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDLoadingView.h; sourceTree = "<group>"; };
 		87B85DBB1F07D1FB00E12337 /* KDLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDLoadingView.swift; sourceTree = "<group>"; };
 		87B85DBD1F07D26500E12337 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingView.swift; path = Helpers/Extensions/Loading/LoadingView.swift; sourceTree = "<group>"; };
+		87E2C1CA1F081A4A005F7BE0 /* TestVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestVM.swift; path = ViewModels/TestVM/TestVM.swift; sourceTree = "<group>"; };
 		9684733DCE4123F4DBE2E85D /* Pods-SKYUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKYUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKYUITests/Pods-SKYUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF799882ECDA1884EFFF2A37 /* Pods-SKY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKY.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKY/Pods-SKY.release.xcconfig"; sourceTree = "<group>"; };
 		E104BE8DC26DF177184C5DAB /* Pods-SKY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKY/Pods-SKY.debug.xcconfig"; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 		877893E11EFEE3840045124F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				87E2C1C91F081A2C005F7BE0 /* TestVM */,
 				877893E21EFEE3B40045124F /* MovieViewModel.swift */,
 			);
 			name = ViewModels;
@@ -312,6 +315,14 @@
 				87B85DBD1F07D26500E12337 /* LoadingView.swift */,
 			);
 			name = Loading;
+			sourceTree = "<group>";
+		};
+		87E2C1C91F081A2C005F7BE0 /* TestVM */ = {
+			isa = PBXGroup;
+			children = (
+				87E2C1CA1F081A4A005F7BE0 /* TestVM.swift */,
+			);
+			name = TestVM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -604,6 +615,7 @@
 				877893EB1EFEED110045124F /* MovieStore.swift in Sources */,
 				876C5D711EFE9F1400B0210E /* AppDelegate.swift in Sources */,
 				877EF93F1EFFF12A0049F0EF /* DataProviderManager.swift in Sources */,
+				87E2C1CB1F081A4A005F7BE0 /* TestVM.swift in Sources */,
 				877893E31EFEE3B40045124F /* MovieViewModel.swift in Sources */,
 				877EF94B1F0025880049F0EF /* BaseViewController.swift in Sources */,
 				877893ED1EFEEDB60045124F /* MovieRouter.swift in Sources */,

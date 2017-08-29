@@ -7,6 +7,7 @@
 
 import Foundation
 import ObjectMapper
+import RealmSwift
 
 public class Movie: Mappable {
 
@@ -22,13 +23,13 @@ public class Movie: Mappable {
   }
 
   // MARK: Properties
-  public var overview: String?
-  public var id: String?
-  public var coverUrl: String?
-  public var title: String?
-  public var backdropsUrl: [String]?
-  public var releaseYear: String?
-  public var duration: String?
+  dynamic var overview: String?
+  dynamic var id: String?
+  dynamic var coverUrl: String?
+  dynamic var title: String?
+  dynamic var backdropsUrl: [String]?
+  dynamic var releaseYear: String?
+  dynamic var duration: String?
 
   // MARK: ObjectMapper Initializers
   /// Map a JSON object to this class using ObjectMapper.

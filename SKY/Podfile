@@ -7,8 +7,10 @@ target 'SKY' do
 	pod 'Alamofire', '~> 4.5'
 	pod 'SwiftyJSON', '~> 3.1'
 	pod 'ObjectMapper'
+  pod 'RealmSwift'
 	pod 'AlamofireImage', '~> 3.1'
 	pod 'EFInternetIndicator'
+  pod 'ObjectMapper+Realm'
   # Pods for SKY
 
   target 'SKYTests' do
